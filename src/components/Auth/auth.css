@@ -1,0 +1,81 @@
+.auth-box{
+    background-color: #4d4d4d;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 1em;
+    box-shadow: #4d4d4d 0px 0px 10px;
+}
+.switch-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .25em;
+}
+.switch-container > button{
+    background: none;
+    border: none;
+    color: #AAACAA;
+    text-decoration: underline;
+}
+input{
+    height: 4em;
+    border: none;
+    width: 20em;
+}
+.form-container > button{
+    height: 3em;
+    width: 10em;
+    border: none;
+    font-weight: bold;
+    border-radius: 1em;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    align-items: center;
+    justify-content: center;
+}
+.form-container > textarea{
+    height: 10em;
+    width: 20em;
+    border: none;
+}
+/* Mobile styling */
+@media only screen and (max-width: 600px) {
+    .auth-view{
+        flex-direction: column;
+    }
+    .nav-container{
+        width: 100%;
+        height: 20vh;
+    }
+    .content-container{
+        width: 100%;
+        height: 60vh;
+    }
+    .header-container{
+        height: 20vh;
+    }
+    .header-content{
+        flex-direction: column;
+    }
+    .header-content > button{
+        margin: 0;
+    }
+    .header-content > p{
+        margin: 0;
+    }
+    .switch-container{
+        flex-direction: column;
+    }
+    .switch-container > button{
+        margin: 0;
+    }
+    .form-container > button{
+        margin: 0;
+    }
+}
