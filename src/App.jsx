@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./components/404";
 import Auth from "./components/Auth/Auth";
 import Update from "./components/main-pages/Update";
@@ -14,7 +15,6 @@ function App() {
     const [myRooms, setMyRooms] = useState([]);
     const [id, setId] = useState(undefined);
     const [admin, setAdmin] = useState(false);
-    const [users, setUsers] = useState([]);
     useEffect(() => {
       if (localStorage.getItem("token")) {
         setSessionToken(localStorage.getItem("token"));
