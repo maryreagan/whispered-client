@@ -27,8 +27,7 @@ function Add() {
             }),
         })
             .then((res) => res.json())
-            .then((json) => navigate("/whispered-client/view/" + json.newRoom._id))
-            .catch((err) => console.log(err));
+            .then((json) => {navigate("/whispered-client/view/" + json.newRoom._id); console.log(json.newRoom._id);})
     };
     const getUsers = () => {
         let url = "https://whispered-bea588220020.herokuapp.com/user/";
@@ -40,7 +39,6 @@ function Add() {
         })
             .then((res) => res.json())
             .then((json) => {setUsers(json.findAll)})
-            .catch((err) => console.log(err));
     }
     useEffect(() => {
         getUsers();

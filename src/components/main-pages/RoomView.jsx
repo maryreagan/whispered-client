@@ -21,14 +21,10 @@ function RoomView({ token, users }) {
             .then((json) => {
                 setName(json.findOne[0].name);
                 setDescription(json.findOne[0].description);
-                console.log(json);
             })
-            .catch((err) => console.log(err));
     };
     const getMessages = () => {
         let url = "https://whispered-bea588220020.herokuapp.com/message/room/" + id;
-        console.log("calling this function");
-        console.log(users);
         fetch(url, {
             method: "GET",
             headers: new Headers({
@@ -40,9 +36,7 @@ function RoomView({ token, users }) {
             .then((json) => {
                 setMessages(json.findMessages);
                 getUsers(json.findMessages);
-                console.log(json);
             })
-            .catch((err) => console.log(err));
     };
     function getUsers(messages) {
         let url = "https://whispered-bea588220020.herokuapp.com/user/";
@@ -54,18 +48,15 @@ function RoomView({ token, users }) {
         })
             .then((res) => res.json())
             .then((json) => {
-                console.log(json);
                 let newMessages = messages.map((message) => {
                     let user = json.findAll.find(
                         (user) => user._id === message.user_id
                     );
                     message.user = user.fName;
-                    console.log(message);
                     return message;
                 });
                 setMessages(newMessages);
             })
-            .catch((err) => console.log(err));
     }
     useEffect(() => {
         getRoom();

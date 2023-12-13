@@ -19,8 +19,6 @@ function Nav({ myRooms, id, admin }) {
             }),
         })
             .then((res) => res.json())
-            .then((json) => console.log(json))
-            .catch((err) => console.log(err));
     };
     return (
         <div className="nav-content">

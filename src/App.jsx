@@ -33,7 +33,6 @@ function App() {
     };
 
     function getRooms() {
-        console.log(sessionToken);
         let url = "https://whispered-bea588220020.herokuapp.com/rooms/myrooms";
         let token = sessionToken;
         fetch(url, {
@@ -48,9 +47,7 @@ function App() {
                 setMyRooms(json);
                 setId(json.decode);
                 setAdmin(json.isAdmin);
-                console.log(json);
             })
-            .catch((err) => console.log(err));
     }
 
 

@@ -17,10 +17,8 @@ function Signup({updateLocalStorage}) {
         })
         .then(res => res.json())
         .then(json => {
-            console.log(json)
             updateLocalStorage(json.token)
         })
-        .catch(err => console.log(err))
 
     }
     return (
