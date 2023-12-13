@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/whispered-client/static/css/main.8cc6e28e.css",
-    "main.js": "/whispered-client/static/js/main.e6a3ab7c.js",
+    "main.css": "/whispered-client/static/css/main.aaffb65a.css",
+    "main.js": "/whispered-client/static/js/main.d452b743.js",
     "static/js/787.c4e7f8f9.chunk.js": "/whispered-client/static/js/787.c4e7f8f9.chunk.js",
     "static/media/Group-2.png": "/whispered-client/static/media/Group-2.6e59d423716015da2ddd.png",
     "index.html": "/whispered-client/index.html",
-    "main.8cc6e28e.css.map": "/whispered-client/static/css/main.8cc6e28e.css.map",
-    "main.e6a3ab7c.js.map": "/whispered-client/static/js/main.e6a3ab7c.js.map",
+    "main.aaffb65a.css.map": "/whispered-client/static/css/main.aaffb65a.css.map",
+    "main.d452b743.js.map": "/whispered-client/static/js/main.d452b743.js.map",
     "787.c4e7f8f9.chunk.js.map": "/whispered-client/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cc6e28e.css",
-    "static/js/main.e6a3ab7c.js"
+    "static/css/main.aaffb65a.css",
+    "static/js/main.d452b743.js"
   ]
 }
