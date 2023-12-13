@@ -24,7 +24,7 @@ function Nav({ myRooms, id, admin }) {
     };
     return (
         <div className="nav-content">
-            <button className="home-button" onClick={() => navigate("/")}>
+            <button className="home-button" onClick={() => navigate("/whispered-client/")}>
                 Home
             </button>
             {myRooms.findAll
@@ -40,10 +40,10 @@ function Nav({ myRooms, id, admin }) {
                                 title={room.name}
                                 menuVariant="dark"
                               >
-                                <NavDropdown.Item onClick={() => navigate("/view/" + room._id)}>
+                                <NavDropdown.Item onClick={() => navigate("/whispered-client/view/" + room._id)}>
                                   Join
                                 </NavDropdown.Item>
-                                {id === room.user_id || admin === true ? <NavDropdown.Item onClick={() => navigate("/update/" + room._id)}>Update</NavDropdown.Item> : null}
+                                {id === room.user_id || admin === true ? <NavDropdown.Item onClick={() => navigate("/whispered-client/update/" + room._id)}>Update</NavDropdown.Item> : null}
                                 {id === room.user_id || admin === true ? <NavDropdown.Item onClick={() => deleteRoom(room._id)}>
                                   Delete
                                 </NavDropdown.Item>: null}

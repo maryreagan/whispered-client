@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { Dropdown} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./main.css"
@@ -27,7 +27,7 @@ function Add() {
             }),
         })
             .then((res) => res.json())
-            .then((json) => console.log(json))
+            .then((json) => navigate("/whispered-client/" + json._id))
             .catch((err) => console.log(err));
     };
     const getUsers = () => {
@@ -101,7 +101,7 @@ function Add() {
                     }) : null}
                 </Dropdown.Menu>
             </Dropdown>
-            <button className="create-room" onClick={() => {handleSubmit(); navigate("/whispered-client/")}}>Create Room</button>
+            <button className="create-room" onClick={handleSubmit}>Create Room</button>
         </div>
     );
 }
