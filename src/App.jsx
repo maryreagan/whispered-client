@@ -82,9 +82,9 @@ function App() {
                     </div>
                     <div className="content-container">
                             <Routes>
-                                <Route path="/" element={<Add />} />
-                                <Route path="/view/:id" element={<RoomView token={sessionToken}/>} />
-                                <Route path="/update/:id" element={<Update token={sessionToken}/>} />
+                                <Route path="/whispered-client/" element={<Add />} />
+                                <Route path="/whispered-client/view/:id" element={<RoomView token={sessionToken}/>} />
+                                <Route path="/whispered-client/update/:id" element={<Update token={sessionToken}/>} />
                                 <Route path="*" element={<NotFound />} />
                             </Routes>
                     </div>

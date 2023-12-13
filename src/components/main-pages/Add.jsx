@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Dropdown} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./main.css"
 function Add() {
     const [name, setName] = useState("");
+    let navigate = useNavigate();
     const [description, setDescription] = useState("");
     const [addedUsers, setAddedUsers] = useState([]);
     const [users, setUsers] = useState([]);
@@ -99,7 +101,7 @@ function Add() {
                     }) : null}
                 </Dropdown.Menu>
             </Dropdown>
-            <button className="create-room" onClick={handleSubmit}>Create Room</button>
+            <button className="create-room" onClick={() => {handleSubmit(); navigate("/whispered-client/")}}>Create Room</button>
         </div>
     );
 }
