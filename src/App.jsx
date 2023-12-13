@@ -82,9 +82,13 @@ function App() {
                     </div>
                     <div className="content-container">
                             <Routes>
+                              {/* Home page */}
                                 <Route path="/whispered-client/" element={<Add />} />
+                                {/* In room, message view */}
                                 <Route path="/whispered-client/view/:id" element={<RoomView token={sessionToken}/>} />
+                                {/* Update room */}
                                 <Route path="/whispered-client/update/:id" element={<Update token={sessionToken}/>} />
+                                {/* Random Page */}
                                 <Route path="*" element={<NotFound />} />
                             </Routes>
                     </div>
