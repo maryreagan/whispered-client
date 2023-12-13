@@ -27,7 +27,7 @@ function Add() {
             }),
         })
             .then((res) => res.json())
-            .then((json) => navigate("/whispered-client/" + json._id))
+            .then((json) => navigate("/whispered-client/view/" + json.newRoom._id))
             .catch((err) => console.log(err));
     };
     const getUsers = () => {
